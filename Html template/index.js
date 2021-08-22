@@ -1,15 +1,15 @@
 $(document).ready(function () {
-    //banner owl carousel
+  //banner owl carousel
 
-    $("#banner-area .owl-carousel").owlCarousel({
-        dots: true,
-        items: 1,
-    });
+  $("#banner-area .owl-carousel").owlCarousel({
+    dots: true,
+    items: 1,
+  });
+
+  
 
 
-
-
-    // top sale owl carousel
+  // top sale owl carousel
     $("#top-sale .owl-carousel").owlCarousel({
         loop: true,
         nav: true,
@@ -28,20 +28,21 @@ $(document).ready(function () {
     });
 
 
-    //isotope filter
+  //isotope filter
 
-    var $grid = $(".grid").isotope({
-        itemSelector: ".grid-item",
-        layoutMode: "fitRows",
-    });
+  var $grid = $(".grid").isotope({
+    itemSelector: ".grid-item",
+    layoutMode: "fitRows",
+  });
 
-    $(".button-group").on("click", "button", function () {
-        var filterValue = $(this).attr("data-filter");
-        $grid.isotope({ filter: filterValue });
-    });
+  $(".button-group").on("click", "button", function () {
+    var filterValue = $(this).attr("data-filter");
+    $grid.isotope({ filter: filterValue });
+  });
+});
 
 
-// new phones owl carousel
+ // new phones owl carousel
     $("#new-phones .owl-carousel").owlCarousel({
         loop: true,
         nav: false,
@@ -60,7 +61,7 @@ $(document).ready(function () {
     });
 
 
-// blogs owl carousel
+ // blogs owl carousel
     $("#blogs .owl-carousel").owlCarousel({
         loop: true,
         nav: false,
@@ -76,13 +77,13 @@ $(document).ready(function () {
     })
 
 
-// product qty section
+    // product qty section
     let $qty_up = $(".qty .qty-up");
     let $qty_down = $(".qty .qty-down");
     let $deal_price = $("#deal-price");
-// let $input = $(".qty .qty_input");
+    // let $input = $(".qty .qty_input");
 
-// click on qty up button
+    // click on qty up button
     $qty_up.click(function(e){
 
         let $input = $(`.qty_input[data-id='${$(this).data("id")}']`);
@@ -109,7 +110,7 @@ $(document).ready(function () {
             }}); // closing ajax request
     }); // closing qty up button
 
-// click on qty down button
+    // click on qty down button
     $qty_down.click(function(e){
 
         let $input = $(`.qty_input[data-id='${$(this).data("id")}']`);
@@ -137,8 +138,5 @@ $(document).ready(function () {
             }}); // closing ajax request
     }); // closing qty down button
 
+
 });
-
-
-
-
